@@ -22,6 +22,12 @@ if (File.Exists(filePath))
 
             // Output the parsed information
             //Console.WriteLine($"Country: {country}, Population: {population}, GDP: {GDP}, Currency: {currency}");
+
+            // GDP per capita calculation with Linq
+            double gdpPerCapita = population > 0 ? GDP / population : 0;
+
+            // Output the GDP per capita
+            Console.WriteLine($"GDP per capita for {country}: {gdpPerCapita:F2}");
         }
         else
         {
